@@ -8,7 +8,7 @@ $ npm install -g truffle
 Next Install Ganache [here](https://truffleframework.com/ganache).
 
 ```
-# Next off move to the directory of the token you'd like to test
+# And finally move to the directory of the token you'd like to test
 $ truffle test
 ```
 
