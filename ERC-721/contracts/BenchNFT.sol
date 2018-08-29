@@ -7,8 +7,9 @@ contract BenchNFT is ERC721Token {
         ERC721Token(_name, _symbol) {
     }
 
-    function mint(address _to, uint _tokenId) public{
+    function mint(address _to, uint _tokenId, string _uri) public{
         _mint(_to, _tokenId);
+        _setTokenURI(_tokenId, _uri);
     }
     
 }

@@ -17,9 +17,9 @@ contract('Main benchmarks for the ERC721 example', async (accounts) => {
     });
     it("It should be able to mint a token to a user", async ()=>{
         nonce++;
-        var err, tx = await benchNFT.mint(owner, nonce, {from: owner});
+        var err, tx = await benchNFT.mint(owner, nonce, "https://metadata.enjincoin.io/hammer.json" ,{from: owner});
         const receipt = await web3.eth.getTransactionReceipt(tx.tx);
-
+        
         totalGasUsed += receipt.gasUsed;
         console.log(`Gas for minting: ${receipt.gasUsed}`);
     });
